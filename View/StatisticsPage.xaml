@@ -16,7 +16,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock FontSize="24">
-                Rating: <Run />
+                Guest Reservation Frequency: <Run x:Name="GuestReservationFrequencyValue" />
             </TextBlock>
         </StackPanel>
         <StackPanel Orientation="Horizontal">

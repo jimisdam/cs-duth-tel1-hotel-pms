@@ -28,7 +28,7 @@
             </StackPanel>
         </StackPanel>
 
-        <DataGrid x:Name="ReservationsGrid" AutoGenerateColumns="False">
+        <DataGrid x:Name="ReservationsGrid" AutoGenerateColumns="False" SelectionChanged="ReservationsGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
@@ -38,6 +38,10 @@
                 <DataGridTextColumn Header="ArrivalDate" Binding="{Binding ArrivalDate}" />
                 <DataGridTextColumn Header="DepartureDate" Binding="{Binding DepartureDate}" />
             </DataGrid.Columns>
+        </DataGrid>
+
+
+        <DataGrid x:Name="RoomReservationsGrid" AutoGenerateColumns="True">
         </DataGrid>
     </StackPanel>
 </Page>

@@ -14,6 +14,22 @@ public partial class StatisticsPage : WPF.Controls.Page
         InitializeComponent();
 
         UpdateRatingScoreValue();
+        UpdateGuestReservationFrequency();
+    }
+
+    private bool UpdateGuestReservationFrequency()
+    {
+        DataTable? guestsTable = ACCESSor.LoadTable("Tenant");
+        if (guestsTable == null) return false;
+
+        DataTable? reservationsTable = ACCESSor.LoadTable("RoomReservation");
+        if (reservationsTable == null) return false;
+
+        double avg = (double)guestsTable.Rows.Count / reservationsTable.Rows.Count;
+
+        this.GuestReservationFrequencyValue.Text = avg.ToString();
+
+        return true;
     }
 
     private bool UpdateRatingScoreValue()
@@ -39,4 +55,6 @@ public partial class StatisticsPage : WPF.Controls.Page
 
         return true;
     }
+
+    
 }

@@ -14,7 +14,7 @@ internal class ACCESSor
 {
     public static DataTable? LoadTable(string table)
     {
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TachyDev.accdb;";
+        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\..\..\TachyDev.accdb;";
         string query = $"SELECT * FROM {table}";
 
         using (OleDbConnection connection = new OleDbConnection(connectionString))

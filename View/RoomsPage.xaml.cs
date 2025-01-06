@@ -38,10 +38,6 @@ public partial class RoomsPage : WPF.Controls.Page
             roomAccessoriesTable.ImportRow(row);
         }
 
-        //var lala = new DataTable();
-
-        //lala.
-
         this.RoomAccessoriesGrid.ItemsSource = roomAccessoriesTable.DefaultView;
     }
 }
