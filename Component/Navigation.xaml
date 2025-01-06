@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="TachyDev1.Component.Navigation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:TachyDev1.ViewModel"
+             xmlns:local="clr-namespace:TachyDev1.Component"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style TargetType="ListView">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="SelectionMode" Value="Single" />
+        </Style>
+        <Style TargetType="ListViewItem">
+            <Setter Property="Foreground" Value="WhiteSmoke" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Black" />
+            <Setter Property="Height" Value="60" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Background" Value="Orange"  />
+                    </Trigger.Setters>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Background" Value="WhiteSmoke"  />
+                        <Setter Property="Foreground" Value="Orange"  />
+                    </Trigger.Setters>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <vm:NavigationVM />
+    </UserControl.DataContext>
+    <ListView SelectionChanged="ActivePage_SelectionChanged">
+        <ListViewItem>AUTHORIZE</ListViewItem>
+        <ListViewItem>RESERVATIONS</ListViewItem>
+        <ListViewItem>ARRIVALS</ListViewItem>
+        <ListViewItem>DEPARTURES</ListViewItem>
+        <ListViewItem>GUESTS</ListViewItem>
+        <ListViewItem>ROOMS</ListViewItem>
+        <ListViewItem>STATISTICS</ListViewItem>
+    </ListView>
+</UserControl>
