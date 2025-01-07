@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TachyDev")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+633b7da1d1b043452e6e6702c993c1d21389a49f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+279e9162dff8a93ab80248e95abd5e2ed805afae")]
 [assembly: System.Reflection.AssemblyProductAttribute("TachyDev")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TachyDev")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
