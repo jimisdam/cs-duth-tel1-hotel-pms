@@ -21,48 +21,42 @@ public partial class MainWindow : Window
 
     private void NavVM_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
     {
-        if (sender is not NavigationVM navVM)
-        {
-            return;
-        }
+        if (sender is not NavigationVM navVM) return;
+        if (navVM.SelectedPageName is not string selectedPageName) return;
 
-        var selected_page = navVM.ActivePage;
-        Page? active_page = null;
+        Page? activePage = null;
 
-        switch (selected_page)
+        switch (selectedPageName)
         {
             case "AUTHORIZE":
-                active_page = new AuthView();
+                activePage = new AuthView();
                 break;
             case "RESERVATIONS":
-                active_page = new ReservationsPage();
+                activePage = new ReservationsPage();
                 break;
             case "ARRIVALS":
-                active_page = new ArrivalsPage();
+                activePage = new ArrivalsPage();
                 break;
             case "DEPARTURES":
-                active_page = new DeparturesPage();
+                activePage = new DeparturesPage();
                 break;
             case "GUESTS":
-                active_page = new GuestsPage();
+                activePage = new GuestsPage();
                 break;
             case "ROOMS": 
-                active_page = new RoomsPage();
+                activePage = new RoomsPage();
                 break;
             case "STATISTICS": 
-                active_page = new StatisticsPage();
+                activePage = new StatisticsPage();
                 break;
             default:
                 break;
         };
 
-        if (active_page == null)
-        {
-            return;
-        }
+        if (activePage == null) return;
         
-        this.NavFrame.Navigate(active_page);
-        this.TitleLabel.Content = active_page.Title;
+        this.NavFrame.Navigate(activePage);
+        this.TitleLabel.Content = activePage.Title;
 
         //MessageBox.Show(active_page);
     }

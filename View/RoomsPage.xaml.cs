@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using TachyDev1.Utility;
+using TachyDev1.ViewModel;
 using WPF = System.Windows;
 
 
@@ -11,33 +12,11 @@ public partial class RoomsPage : WPF.Controls.Page
     public RoomsPage()
     {
         InitializeComponent();
-
-        DataTable? roomsTable = ACCESSor.LoadTable("Room");
-        if (roomsTable != null)
-        {
-            this.RoomsGrid.ItemsSource = roomsTable.DefaultView;
-        }
     }
 
     private void RoomsGrid_SelectionChanged(object sender, WPF.Controls.SelectionChangedEventArgs e)
     {
-        if (this.RoomsGrid.SelectedItem is not DataRowView selectedRoom) return;
-        if ((selectedRoom["Category"] as string) is not string selectedRoomCategory) return;
-
-        DataTable? accessoriesTable = ACCESSor.LoadTable("RoomCategoryAccessory");
-        if (accessoriesTable == null) return;
-
-        var roomAccessoriesTable = accessoriesTable.Clone();
-
-        foreach (DataRow row in accessoriesTable.Rows)
-        {
-            string? currRoomCategory = row["RoomCategory"] as string;
-
-            if (currRoomCategory! != selectedRoomCategory) continue;
-
-            roomAccessoriesTable.ImportRow(row);
-        }
-
-        this.RoomAccessoriesGrid.ItemsSource = roomAccessoriesTable.DefaultView;
+        if (this.DataContext is not RoomsVM vm) return;
+        vm.OnRoomSelection();
     }
 }

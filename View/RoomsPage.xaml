@@ -4,18 +4,23 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TachyDev1.View"
+      xmlns:vm="clr-namespace:TachyDev1.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Rooms">
-
+    <Page.DataContext>
+        <vm:RoomsVM />
+    </Page.DataContext>
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
         <StackPanel Orientation="Horizontal">
-            <DataGrid x:Name="RoomsGrid" MaxHeight="300" SelectionChanged="RoomsGrid_SelectionChanged" >
+            <DataGrid MaxHeight="300" 
+                      ItemsSource="{Binding RoomsCollection}"
+                      SelectedItem="{Binding SelectedRoom}"
+                      SelectionChanged="RoomsGrid_SelectionChanged" />
 
-            </DataGrid>
+            <DataGrid MaxHeight="300"
+                      ItemsSource="{Binding RoomAccessoriesCollection}"/>
 
-            <DataGrid x:Name="RoomAccessoriesGrid" MaxHeight="300">
-            </DataGrid>
         </StackPanel>
     </StackPanel>
 </Page>

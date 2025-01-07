@@ -1,12 +1,21 @@
 ﻿
+using System.Data;
+
 namespace TachyDev1.Model;
 
 internal class RoomClassModel
 {
-    public string? Id { get; set; }
-    public string? DisplayName { get; set; }
-    public double BasePrice { get; set; } = 0;
-    public string? Description { get; set; }
+    public string? Name { get; set; }
+    public int? Beds { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
-    public DateOnly? CreatedAt { get; set; }
+    public static RoomClassModel? FromDataRow(DataRow row)
+    {
+        return new RoomClassModel()
+        {
+            Name = row["Name"].ToString(),
+            Beds = int.Parse(row["Beds"].ToString()),
+            CreatedAt = DateTime.Parse(row["Tenant"].ToString()),
+        };
+    }
 }

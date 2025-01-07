@@ -11,15 +11,4 @@ public partial class Navigation : WPF.Controls.UserControl
     {
         InitializeComponent();
     }
-
-    private void ActivePage_SelectionChanged(object sender, WPF.Controls.SelectionChangedEventArgs e)
-    {
-        var navList = (WPF.Controls.ListView)sender;
-        var selectedItem = (WPF.Controls.ListViewItem)navList.SelectedItem;
-        var page = selectedItem.Content.ToString();
-
-        var navVM = (NavigationVM)this.DataContext;
-
-        navVM.ActivePage = page;
-    }
 }

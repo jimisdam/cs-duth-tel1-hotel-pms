@@ -31,7 +31,7 @@ internal class ACCESSor
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}\nFrom: {table}");
                 connection.Close();
             }
         }

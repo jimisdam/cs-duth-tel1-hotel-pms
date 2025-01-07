@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WPF = System.Windows;
 
 namespace TachyDev1.ViewModel;
 
 internal class NavigationVM: BaseViewModel
 {
-	private string? _ActivePage;
-
-
-	public string? ActivePage
+	private WPF.Controls.ListViewItem? _PageSelection;
+	public WPF.Controls.ListViewItem? PageSelection
 	{
-		get { return _ActivePage; }
-		set { _ActivePage = value; OnPropertyChanged(); }
+		get { return _PageSelection; }
+		set { _PageSelection= value; OnPropertyChanged(); }
 	}
 
+    public string? SelectedPageName
+    {
+        get => this.PageSelection?.Content.ToString();
+    }
 }

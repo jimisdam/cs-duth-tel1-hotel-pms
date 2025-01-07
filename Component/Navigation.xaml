@@ -53,7 +53,7 @@
     <UserControl.DataContext>
         <vm:NavigationVM />
     </UserControl.DataContext>
-    <ListView SelectionChanged="ActivePage_SelectionChanged">
+    <ListView SelectedItem="{Binding PageSelection}">
         <ListViewItem>AUTHORIZE</ListViewItem>
         <ListViewItem>RESERVATIONS</ListViewItem>
         <ListViewItem>ARRIVALS</ListViewItem>

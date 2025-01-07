@@ -1,14 +1,27 @@
 ﻿
+using System.Data;
+
 namespace TachyDev1.Model;
 
 internal class RoomReservationModel
 {
-    public string? Id { get; set; }
-    public string? ReservationId { get; set; }
-    public string? RoomId { get; set; }
-    public string? GuestId { get; set; }
+    //public Guid? Id { get; set; }
+    public Guid? ReservationId { get; set; }
+    public string? RoomCode { get; set; }
+    public Guid? GuestId { get; set; }
 
-    public ReservationModel? Reservation { get; set; }
-    public RoomModel? Room { get; set; }
-    public GuestModel? Guest { get; set; }
+    //public ReservationModel? Reservation { get; set; }
+    //public RoomModel? Room { get; set; }
+    //public GuestModel? Guest { get; set; }
+
+    public static RoomReservationModel? FromDataRow(DataRow row)
+    {
+        return new RoomReservationModel()
+        {
+            //Id = Guid.Parse(row["ID"].ToString()),
+            ReservationId = Guid.Parse(row["Reservation"].ToString()),
+            RoomCode = row["Room"].ToString(),
+            GuestId = Guid.Parse(row["Tenant"].ToString()),
+        };
+    }
 }

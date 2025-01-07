@@ -1,27 +1,40 @@
-﻿using WPF = System.Windows;
+﻿using System.Data;
+using WPF = System.Windows;
 
 namespace TachyDev1.Model;
 
 [Flags]
-public enum RoomStatus
+public enum RoomCondition
 {
     Free = 0,
     Clean = 1,
     Occupied = 2,
     Dirty = 4,
     Damaged = 8,
-    Unavailable = RoomStatus.Occupied | RoomStatus.Dirty | RoomStatus.Damaged,
-    Available = RoomStatus.Free,
+    Unavailable = RoomCondition.Occupied | RoomCondition.Dirty | RoomCondition.Damaged,
+    Available = RoomCondition.Free,
 }
 
 internal class RoomModel
 {
-    public string? Id { get; set; }
-    public string? ClassId{ get; set; }
-    public RoomStatus? Status { get; set; }
-    public DateOnly? CreatedAt { get; set; }
+    public string? Code { get; set; }
+    public string? ClassName { get; set; }
+    public string? Condition { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
 
     // from ClassId
-    public RoomClassModel? Class { get; set; }
+    //public RoomClassModel? Class { get; set; }
+
+    public static RoomModel? FromDataRow(DataRow row)
+    {
+        return new RoomModel()
+        {
+            //Id = Guid.Parse(row["ID"].ToString()),
+            Code = row["Code"].ToString(),
+            ClassName = row["Category"].ToString(),
+            Condition = row["Condition"].ToString(),
+            CreatedAt = DateTime.Parse(row["CreatedAt"].ToString()),
+        };
+    }
 }
