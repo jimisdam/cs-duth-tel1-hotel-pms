@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TachyDev1"
-        xmlns:component="clr-namespace:TachyDev1.Component"
+        xmlns:cmp="clr-namespace:TachyDev1.Component"
         xmlns:vm="clr-namespace:TachyDev1.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
@@ -29,8 +29,9 @@
                 TachyTEL
             </Label>
 
-            <component:Navigation Grid.Row="1" x:Name="Nav" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            </component:Navigation>
+            <cmp:Navigation Grid.Row="1" 
+                            x:Name="Nav" 
+                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
         </Grid>
 
 

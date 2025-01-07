@@ -11,5 +11,8 @@
     <Compile Update="View\AuthView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Window\NewReservationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@ namespace TachyDev1.Model;
 internal class ReservationModel
 {
     public Guid? Id { get; set; }
+    public Guid? ReservedByGuestId { get; set; }
     public string? Type { get; set; }
     public string? GuestsType { get; set; }
     public string? Status { get; set; }
@@ -17,6 +18,7 @@ internal class ReservationModel
         return new ReservationModel()
         {
             Id = Guid.Parse(row["ID"].ToString()),
+            ReservedByGuestId = Guid.Parse(row["ReservedByTenant"].ToString()),
             Type = row["Type"] as string,
             GuestsType = row["GuestType"] as string,
             Status = row["Status"] as string,

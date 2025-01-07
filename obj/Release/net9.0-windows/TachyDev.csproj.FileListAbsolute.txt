@@ -59,6 +59,7 @@ C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Relea
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\ReservationsPage.g.cs
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\RoomsPage.g.cs
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\StatisticsPage.g.cs
+C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\Window\NewReservationWindow.g.cs
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\App.g.cs
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\TachyDev_MarkupCompile.cache
@@ -73,6 +74,7 @@ C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Relea
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\ReservationsPage.baml
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\RoomsPage.baml
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\View\StatisticsPage.baml
+C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\Window\NewReservationWindow.baml
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\TachyDev.g.resources
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\TachyDev.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\obj\Release\net9.0-windows\TachyDev.AssemblyInfoInputs.cache

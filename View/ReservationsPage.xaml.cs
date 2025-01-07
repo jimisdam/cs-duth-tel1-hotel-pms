@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Windows;
+using TachyDev.Window;
 using TachyDev1.Model;
 using TachyDev1.Utility;
 using TachyDev1.ViewModel;
@@ -20,5 +21,11 @@ public partial class ReservationsPage : WPF.Controls.Page
     {
         if (this.DataContext is not ReservationsVM vm) return;
         vm.OnReservationSelection();
+    }
+
+    private void NewReservationButton_Click(object sender, RoutedEventArgs e)
+    {
+        var status = (new NewReservationWindow()).ShowDialog();
+        //MessageBox.Show($"Status: {status}");
     }
 }

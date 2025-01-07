@@ -15,7 +15,7 @@
                 HorizontalAlignment="Center">
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Left">
-            <Button>New</Button>
+            <Button Click="NewReservationButton_Click">New</Button>
             <Button>Check In</Button>
             <Button>Check Out</Button>
             <Button>Cancel</Button>
