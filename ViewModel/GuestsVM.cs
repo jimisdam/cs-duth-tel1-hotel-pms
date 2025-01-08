@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.Data;
-using TachyDev1.Utility;
+using TachyDev.Utility;
 
-namespace TachyDev1.ViewModel;
+namespace TachyDev.ViewModel;
 
 internal class GuestsVM : BaseViewModel
 {

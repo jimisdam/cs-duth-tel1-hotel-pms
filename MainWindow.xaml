@@ -1,11 +1,11 @@
-﻿<Window x:Class="TachyDev1.MainWindow"
+﻿<Window x:Class="TachyDev.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TachyDev1"
-        xmlns:cmp="clr-namespace:TachyDev1.Component"
-        xmlns:vm="clr-namespace:TachyDev1.ViewModel"
+        xmlns:local="clr-namespace:TachyDev"
+        xmlns:cmp="clr-namespace:TachyDev.Component"
+        xmlns:vm="clr-namespace:TachyDev.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
     <Grid>

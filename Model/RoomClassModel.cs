@@ -1,13 +1,13 @@
 ﻿
 using System.Data;
 
-namespace TachyDev1.Model;
+namespace TachyDev.Model;
 
 internal class RoomClassModel
 {
     public string? Name { get; set; }
     public int? Beds { get; set; }
-    public DateTime? CreatedAt { get; set; }
+    //public DateTime? CreatedAt { get; set; }
 
     public static RoomClassModel? FromDataRow(DataRow row)
     {
@@ -15,7 +15,7 @@ internal class RoomClassModel
         {
             Name = row["Name"].ToString(),
             Beds = int.Parse(row["Beds"].ToString()),
-            CreatedAt = DateTime.Parse(row["Tenant"].ToString()),
+            //CreatedAt = DateTime.Parse(row["CreatedAt"].ToString()),
         };
     }
 }

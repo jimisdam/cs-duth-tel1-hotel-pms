@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace TachyDev1
+namespace TachyDev
 {
     /// <summary>
     /// Interaction logic for App.xaml

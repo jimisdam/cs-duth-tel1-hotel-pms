@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TachyDev1.ViewModel;
+namespace TachyDev.ViewModel;
 
 internal partial class BaseViewModel : INotifyPropertyChanged
 {

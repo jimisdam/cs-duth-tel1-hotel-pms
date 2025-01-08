@@ -1,6 +1,6 @@
 ﻿using WPF = System.Windows;
 
-namespace TachyDev1.ViewModel;
+namespace TachyDev.ViewModel;
 
 internal class NavigationVM: BaseViewModel
 {

@@ -1,13 +1,13 @@
 ﻿using System.Data;
 using System.Windows;
 using TachyDev.Window;
-using TachyDev1.Model;
-using TachyDev1.Utility;
-using TachyDev1.ViewModel;
+using TachyDev.Model;
+using TachyDev.Utility;
+using TachyDev.ViewModel;
 using WPF = System.Windows;
 
 
-namespace TachyDev1.View;
+namespace TachyDev.View;
 
 
 public partial class ReservationsPage : WPF.Controls.Page

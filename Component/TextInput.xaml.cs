@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TachyDev1.Component;
+namespace TachyDev.Component;
 
 /// <summary>
 /// Interaction logic for TextInput.xaml

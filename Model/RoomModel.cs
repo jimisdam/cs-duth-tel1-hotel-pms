@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using WPF = System.Windows;
 
-namespace TachyDev1.Model;
+namespace TachyDev.Model;
 
 [Flags]
 public enum RoomCondition

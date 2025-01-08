@@ -1,8 +1,8 @@
 ﻿using WPF = System.Windows;
-using TachyDev1.ViewModel;
+using TachyDev.ViewModel;
 
 
-namespace TachyDev1.Component;
+namespace TachyDev.Component;
 
 
 public partial class Navigation : WPF.Controls.UserControl

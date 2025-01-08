@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TachyDev.Window"
+        xmlns:vm="clr-namespace:TachyDev.ViewModel"
         mc:Ignorable="d"
         Height="600" Width="800"
         Title="New Reservation">
+    <Window.DataContext>
+        <vm:NewReservationVM />
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -35,13 +39,56 @@
         </TextBlock>
 
         <StackPanel Grid.Column="0" Grid.Row="1" 
-                    Orientation="Vertical"
+                    Orientation="Horizontal"
                     HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <Label>Departure Date:</Label>
+                <Label>Arrival Date:</Label>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <DatePicker SelectedDate="{Binding CurrentReservation.ArrivalDate}" />
+                <DatePicker SelectedDate="{Binding CurrentReservation.DepartureDate}" />
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" 
-                    Orientation="Vertical"
+                    Orientation="Horizontal"
                     HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <Label>Last Name:</Label>
+                <Label>First Name:</Label>
+                <Label>Country:</Label>
+                <Label>Legal ID:</Label>
+                <Label>Birth Date:</Label>
+                <Label>Email:</Label>
+                <Label>Room Type:</Label>
+                <Label>Room:</Label>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <RibbonTextBox />
+                <RibbonTextBox />
+                <RibbonTextBox />
+                <RibbonTextBox />
+                <DatePicker />
+                <RibbonTextBox />
+                <RibbonTextBox />
+                <ComboBox ItemsSource="{Binding RoomClassesCollection}"
+                          SelectedItem="{Binding SelectedRoomClass}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox ItemsSource="{Binding RoomsCollection}"
+                          SelectedItem="{Binding SelectedRoom}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Code}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

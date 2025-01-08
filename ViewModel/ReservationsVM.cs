@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.Data;
-using TachyDev1.Utility;
+using TachyDev.Utility;
 
-namespace TachyDev1.ViewModel;
+namespace TachyDev.ViewModel;
 
 internal class ReservationsVM : BaseViewModel
 {
@@ -10,7 +10,6 @@ internal class ReservationsVM : BaseViewModel
     public ObservableCollection<Model.RoomReservationModel> RoomReservationsCollection { get; set; }
 
     private Model.ReservationModel? _SelectedReservation;
-
     public Model.ReservationModel? SelectedReservation
     {
         get { return _SelectedReservation; }

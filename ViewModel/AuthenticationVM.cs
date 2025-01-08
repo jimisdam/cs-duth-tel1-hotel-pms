@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TachyDev1.ViewModel;
+namespace TachyDev.ViewModel;
 
 internal class AuthenticationVM: BaseViewModel
 {

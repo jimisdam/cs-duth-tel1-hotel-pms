@@ -1,10 +1,10 @@
 ﻿using System.Data;
-using TachyDev1.Utility;
-using TachyDev1.ViewModel;
+using TachyDev.Utility;
+using TachyDev.ViewModel;
 using WPF = System.Windows;
 
 
-namespace TachyDev1.View;
+namespace TachyDev.View;
 
 
 public partial class RoomsPage : WPF.Controls.Page

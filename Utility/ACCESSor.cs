@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Data.OleDb;
 
-namespace TachyDev1.Utility;
+namespace TachyDev.Utility;
 
 internal class ACCESSor
 {

@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\jimisdam\source\repos\TachyDevSolution\cs-duth-tel1-hotel-pms\App.xaml
 112131147731
 
-30-1031821630
+31-167382289
 202385631077
 Component\Navigation.xaml;Component\TextInput.xaml;MainWindow.xaml;View\ArrivalsPage.xaml;View\AuthView.xaml;View\DeparturesPage.xaml;View\GuestsPage.xaml;View\ReservationsPage.xaml;View\RoomsPage.xaml;View\StatisticsPage.xaml;Window\NewReservationWindow.xaml;
 
-True
+False
 

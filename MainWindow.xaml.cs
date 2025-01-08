@@ -1,14 +1,10 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using TachyDev1.View;
-using TachyDev1.ViewModel;
+﻿using WPF = System.Windows;
+using TachyDev.View;
+using TachyDev.ViewModel;
 
-namespace TachyDev1;
+namespace TachyDev;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+public partial class MainWindow : WPF.Window
 {
     public MainWindow()
     {
@@ -24,7 +20,7 @@ public partial class MainWindow : Window
         if (sender is not NavigationVM navVM) return;
         if (navVM.SelectedPageName is not string selectedPageName) return;
 
-        Page? activePage = null;
+        WPF.Controls.Page? activePage = null;
 
         switch (selectedPageName)
         {

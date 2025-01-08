@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TachyDev1.View;
+namespace TachyDev.View;
 
 /// <summary>
 /// Interaction logic for AuthView.xaml

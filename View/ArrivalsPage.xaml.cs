@@ -1,7 +1,7 @@
 ﻿using WPF = System.Windows;
 
 
-namespace TachyDev1.View;
+namespace TachyDev.View;
 
 
 public partial class ArrivalsPage : WPF.Controls.Page

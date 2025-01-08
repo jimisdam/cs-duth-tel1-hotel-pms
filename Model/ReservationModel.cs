@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace TachyDev1.Model;
+namespace TachyDev.Model;
 
 internal class ReservationModel
 {

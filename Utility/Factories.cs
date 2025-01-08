@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TachyDev1.Utility;
+namespace TachyDev.Utility;
 
 internal class Factories
 {

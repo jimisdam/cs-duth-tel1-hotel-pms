@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="TachyDev1.Component.Navigation"
+﻿<UserControl x:Class="TachyDev.Component.Navigation"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:vm="clr-namespace:TachyDev1.ViewModel"
-             xmlns:local="clr-namespace:TachyDev1.Component"
+             xmlns:vm="clr-namespace:TachyDev.ViewModel"
+             xmlns:local="clr-namespace:TachyDev.Component"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="400">
     <UserControl.Resources>
